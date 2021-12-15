@@ -18,7 +18,31 @@ public class Task04 {
 
     public static void main(String[] args) {
         // TODO: Здесь Ваш код. Числа друг от друга отделять пробелом
-
+        int count = 0;
+        int number = 2;
+        final int LIMIT = 4;
+        while (count<LIMIT)
+        {
+            if(isPerfectNumber(number))
+            {
+                count++;
+                System.out.print(number+" ");
+            }
+            number++;
+        }
     }
 
+    public static boolean isPerfectNumber(int number)
+    {
+        int sum = 0;
+        for(int i = 1;i<=number/2+1;i++)
+        {
+            if(number%i==0)
+            {
+                sum+=i;
+            }
+
+        }
+        return (number==sum)?true:false;
+    }
 }

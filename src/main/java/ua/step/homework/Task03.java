@@ -16,8 +16,8 @@ public class Task03 {
         // TODO: Здесь Ваш код. Числа друг от друга отделять пробелом
         int number = 2;
         int stop = 0;
-        final int limit = 10_000_000;
-        while (stop<=limit)
+        final int LIMIT = 10_000_000;
+        while (stop<=LIMIT)
         {
             if(isArmstrong(number))
             {

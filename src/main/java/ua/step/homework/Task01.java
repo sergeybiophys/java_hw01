@@ -18,8 +18,8 @@ public class Task01 {
         // TODO: Здесь Ваш код. Числа друг от друга отделять пробелом
 
         int i = 0;
-        final int limit = 10_000_000;
-        while (fibonacci(i)<=limit)
+        final int LIMIT = 10_000_000;
+        while (fibonacci(i)<=LIMIT)
         {
             System.out.print(fibonacci(i++)+" ");
         }
