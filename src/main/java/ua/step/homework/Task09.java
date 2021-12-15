@@ -10,5 +10,18 @@ public class Task09 {
 
     public static void main(String[] args) {
         // TODO: Здесь Ваш код.
+        System.out.print(multiples3and5());
+    }
+    public static long multiples3and5()
+    {
+        long sum = 0;
+        for(int i = 1; i<1000; i++)
+        {
+            if(i%3==0||i%5==0)
+            {
+                sum+=i;
+            }
+        }
+        return sum;
     }
 }
