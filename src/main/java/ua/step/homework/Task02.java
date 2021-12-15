@@ -21,6 +21,36 @@ package ua.step.homework;
 public class Task02 {
     public static void main(String[] args) {
         // TODO: Здесь Ваш код. Числа друг от друга отделять пробелом
+        int startNumber = 2;
+        int count = 0;
+        while(count<27)
+        {
+            if(prime(startNumber))
+            {
+                System.out.print(startNumber+" ");
+                count++;
+            }
+            startNumber++;
+        }
+    }
 
+    public static boolean prime(long number)
+    {
+        int count = 0;
+        for(long i = 2; i<Math.sqrt(number)+1;i++)
+        {
+            if(number%i==0&&number!=2)
+            {
+                count++;
+            }
+        }
+        if(count==0)
+        {
+            return  true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
