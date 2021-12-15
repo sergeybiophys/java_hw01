@@ -33,16 +33,5 @@ public class Task07 {
         }
         System.out.print(value % 2);
     }
-    /*private static void printBinaryForm(int number) {
-        int remainder;
-
-        if (number <= 1) {
-            System.out.print(number);
-            return;
-        }
-
-        remainder = number % 2;
-        printBinaryForm(number >> 1);
-        System.out.print(remainder);
-    }*/
+    
 }
