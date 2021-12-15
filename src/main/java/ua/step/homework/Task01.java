@@ -17,5 +17,25 @@ public class Task01 {
     public static void main(String[] args) {
         // TODO: Здесь Ваш код. Числа друг от друга отделять пробелом
 
+        int i = 0;
+        final int limit = 10_000_000;
+        while (fibonacci(i)<=limit)
+        {
+            System.out.print(fibonacci(i++)+" ");
+        }
+
+    }
+
+    public static long fibonacci(int number)
+    {
+        if(number==0)
+        {
+            return 0;
+        }
+        if(number==1)
+        {
+            return 1;
+        }
+        return fibonacci(number-1)+fibonacci(number-2);
     }
 }
