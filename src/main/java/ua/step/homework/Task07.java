@@ -22,7 +22,18 @@ public class Task07 {
         boolean isInt = scanner.hasNextInt();
         int value = scanner.nextInt();
         // TODO: Здесь Ваш код.
-
+        toBinary(value);
         scanner.close();
+    }
+    public static void toBinary(int value)
+    {
+        if (value >= 2)
+        {
+            toBinary(value>>1);
+        }
+        if (value % 2 < 10)
+            System.out.print(value % 2);
+        else
+            System.out.print(value % 2 + 55);
     }
 }
