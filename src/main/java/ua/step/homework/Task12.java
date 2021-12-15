@@ -23,8 +23,38 @@ public class Task12 {
         }
 
         // TODO: Здесь Ваш код
-
+        day = days(x,y);
+        System.out.print(day);
 
         scanner.close();
+    }
+
+    public static int days(float x, float y)
+    {
+        int count = 0;
+
+        while (y>0)
+        {
+            if(count==0)
+            {
+                y-=x;
+                if(y<=0)
+                {
+                    return  count;
+                }
+                //x+=(x*0.1);
+            }
+            else
+            {
+                y-=x*0.1;
+                if(y<=0)
+                {
+                    return  count;
+                }
+                x+=(x*0.1);
+            }
+            count++;
+        }
+        return count;
     }
 }
