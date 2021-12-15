@@ -14,6 +14,44 @@ package ua.step.homework;
 public class Task03 {
     public static void main(String[] args) {
         // TODO: Здесь Ваш код. Числа друг от друга отделять пробелом
+        int number = 2;
+        int stop = 0;
+        final int limit = 10_000_000;
+        while (stop<=limit)
+        {
+            if(isArmstrong(number))
+            {
+                stop = number;
+                System.out.print(number+" ");
+            }
+            number++;
+        }
+    }
 
+    public static boolean isArmstrong(long number)
+    {
+        long original = number;
+        int degree = digitsInNumber(number);
+        int sum = 0;
+        for(;number%10!=0 || number/10!=0 ; number/=10)
+        {
+            sum+=Math.pow(number%10,degree);
+        }
+        return (original==sum)?true:false;
+    }
+
+    public  static int digitsInNumber(long number)
+    {
+        int total = 0;
+        if(number>=0)
+        {
+            if(number==0) total = 1;
+            for(;number!=0;number/=10,total+=1);
+        }
+        else
+        {
+            System.out.println("Something went wrong");
+        }
+        return total;
     }
 }
