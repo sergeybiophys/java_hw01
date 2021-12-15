@@ -11,5 +11,28 @@ package ua.step.homework;
 public class Task08 {
     public static void main(String[] args) {
         // TODO: Здесь Ваш код.
+        allCombinations();
+    }
+    public static void allCombinations()
+    {
+        int a;
+        int b;
+
+        for(int h=0;h<24;h++){
+
+            if(h<10)
+            {
+                a = 0;
+                b = h;
+            }
+            else{
+                a = h/10;
+                b = h%10;
+            }
+            if(b<6)
+            {
+                System.out.print(a+""+ b + ":" + b + "" + a + " ");
+            }
+        }
     }
 }
