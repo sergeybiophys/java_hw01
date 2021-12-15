@@ -31,9 +31,18 @@ public class Task07 {
         {
             toBinary(value>>1);
         }
-        if (value % 2 < 10)
-            System.out.print(value % 2);
-        else
-            System.out.print(value % 2 + 55);
+        System.out.print(value % 2);
     }
+    /*private static void printBinaryForm(int number) {
+        int remainder;
+
+        if (number <= 1) {
+            System.out.print(number);
+            return;
+        }
+
+        remainder = number % 2;
+        printBinaryForm(number >> 1);
+        System.out.print(remainder);
+    }*/
 }
